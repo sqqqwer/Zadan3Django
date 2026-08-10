@@ -26,8 +26,16 @@ build-backend = "poetry.core.masonry.api"
 target-version = "py312"
 exclude = [".git", "__pycache__", "**/migrations/*.py"]
 line-length = 119
-lint.extend-select = ["RUF", "I", "E", "W", "F", "UP", "B", "SIM", "PL", "TCH"]
-lint.ignore = ["RUF001"]
+lint.extend-select = ["D", "RUF", "I", "E", "W", "F", "UP", "B", "SIM", "PL", "TCH"]
+lint.ignore = [
+    "RUF001",
+    "D100",
+    "D104",
+    "D106",
+    "D105"
+]
+lint.pydocstyle.convention = "google"
+
 
 [tool.mypy]
 plugins = [

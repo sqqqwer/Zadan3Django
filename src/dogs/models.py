@@ -14,7 +14,20 @@ from dogs.constants import (
 
 
 class Breed(models.Model):
+    """Represent a dog breed.
+
+    Attributes:
+        name: The breed name.
+        size: The breed size category.
+        friendliness: The breed friendliness rating.
+        trainability: The breed trainability rating.
+        shedding_amount: The breed shedding rating.
+        exercise_needs: The breed exercise needs rating.
+    """
+
     class Size(models.TextChoices):
+        """Define the available choices for the breed size field."""
+
         TINY = 'tiny', 'Миниатюрная'
         SMALL = 'small', 'Маленькая'
         MEDIUM = 'medium', 'Средняя'
@@ -62,6 +75,18 @@ class Breed(models.Model):
 
 
 class Dog(models.Model):
+    """Represent a dog.
+
+    Attributes:
+        name: The dog name.
+        age: The dog age.
+        breed: The breed to which the dog belongs.
+        gender: The dog gender.
+        color: The dog color.
+        favorite_food: The dog favorite food.
+        favorite_toy: The dog favorite toy.
+    """
+
     name = models.CharField(
         'Имя',
         max_length=DOG_NAME_CHAR_MAX_LENGTH
