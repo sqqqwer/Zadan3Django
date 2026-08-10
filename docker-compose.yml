@@ -11,7 +11,7 @@ services:
       command: python manage.py migrate
       restart: "no"
   db:
-    image: postgres:13
+    image: postgres:17
     env_file: .env
     volumes:
       - pg_data:/var/lib/postgresql/data
