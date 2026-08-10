@@ -8,9 +8,11 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "django (>=6.1,<7.0)",
+    "django (>=6.0,<6.1)",
     "python-dotenv (>=1.2.2,<2.0.0)",
-    "djangorestframework (>=3.17.2,<4.0.0)"
+    "djangorestframework (>=3.17.2,<4.0.0)",
+    "psycopg[binary] (>=3.3.4,<4.0.0)",
+    "gunicorn (>=26.0.0,<27.0.0)"
 ]
 
 [tool.poetry]
@@ -22,13 +24,33 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 target-version = "py312"
-exclude = [".git", "__pycache__"]
+exclude = [".git", "__pycache__", "**/migrations/*.py"]
 line-length = 119
-lint.extend-select = ["RUF", "I", "E", "W", "F", "UP", "B", "SIM", "PL", "TCH"]
-lint.ignore = ["RUF001"]
+lint.extend-select = ["D", "RUF", "I", "E", "W", "F", "UP", "B", "SIM", "PL", "TCH"]
+lint.ignore = [
+    "RUF001",
+    "D100",
+    "D104",
+    "D106",
+    "D105"
+]
+lint.pydocstyle.convention = "google"
+
+
+[tool.mypy]
+plugins = [
+    "mypy_django_plugin.main",
+    "mypy_drf_plugin.main",
+]
+mypy_path = "src"
+
+[tool.django-stubs]
+django_settings_module = "zadan3django.settings"
 
 [dependency-groups]
 dev = [
     "mypy (>=2.3.0,<3.0.0)",
-    "django-stubs (>=6.0.8,<7.0.0)"
+    "django-stubs (>=6.0.8,<7.0.0)",
+    "djangorestframework-stubs[compatible-mypy] (>=3.17.1,<4.0.0)",
+    "ruff (>=0.16.2,<0.17.0)"
 ]
