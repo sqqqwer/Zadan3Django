@@ -1,0 +1,824 @@
+{
+  "info": {
+    "_postman_id": "9f2b4b2d-697f-4c99-80ec-8286315ad91a",
+    "name": "Dogs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40810116"
+  },
+  "item": [
+    {
+      "name": "Change Breed",
+      "item": [
+        {
+          "name": "Create Breed 1",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Овчарка",
+                  "type": "text",
+                  "uuid": "0320b492-18f6-4be2-8dd3-148518a038e2"
+                },
+                {
+                  "key": "size",
+                  "value": "medium",
+                  "type": "text",
+                  "uuid": "4b99066b-3adf-4c3d-82c2-dd018830b5fa"
+                },
+                {
+                  "key": "friendliness",
+                  "value": "4",
+                  "type": "text",
+                  "uuid": "5636d2f0-23ee-41d5-950e-383e2062bdb9"
+                },
+                {
+                  "key": "trainability",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "58094925-77df-4ec6-beec-e899ded632f4"
+                },
+                {
+                  "key": "shedding_amount",
+                  "value": "2",
+                  "type": "text",
+                  "uuid": "1d25f46b-60aa-497b-bef3-c2c0d0620b25"
+                },
+                {
+                  "key": "exercise_needs",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "69867dd7-32b2-4b9f-9d1f-94ebf0bac14b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1:8000/api/breeds/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "breeds",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Breed 2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Шпиц",
+                  "type": "text",
+                  "uuid": "0320b492-18f6-4be2-8dd3-148518a038e2"
+                },
+                {
+                  "key": "size",
+                  "value": "tiny",
+                  "type": "text",
+                  "uuid": "4b99066b-3adf-4c3d-82c2-dd018830b5fa"
+                },
+                {
+                  "key": "friendliness",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "5636d2f0-23ee-41d5-950e-383e2062bdb9"
+                },
+                {
+                  "key": "trainability",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "58094925-77df-4ec6-beec-e899ded632f4"
+                },
+                {
+                  "key": "shedding_amount",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "1d25f46b-60aa-497b-bef3-c2c0d0620b25"
+                },
+                {
+                  "key": "exercise_needs",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "69867dd7-32b2-4b9f-9d1f-94ebf0bac14b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1:8000/api/breeds/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "breeds",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "405 for patch",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "shedding_amount",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "0bcf31ac-4d10-44f8-bd64-965743cd2b32"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1:8000/api/breeds/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "breeds",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change Breed 1",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Овчарка",
+                  "type": "text"
+                },
+                {
+                  "key": "size",
+                  "value": "medium",
+                  "type": "text"
+                },
+                {
+                  "key": "friendliness",
+                  "value": "4",
+                  "type": "text"
+                },
+                {
+                  "key": "trainability",
+                  "value": "5",
+                  "type": "text"
+                },
+                {
+                  "key": "shedding_amount",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "0bcf31ac-4d10-44f8-bd64-965743cd2b32"
+                },
+                {
+                  "key": "exercise_needs",
+                  "value": "5",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1:8000/api/breeds/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "breeds",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Breed for delete",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "sadfas",
+                  "type": "text",
+                  "uuid": "0320b492-18f6-4be2-8dd3-148518a038e2"
+                },
+                {
+                  "key": "size",
+                  "value": "tiny",
+                  "type": "text",
+                  "uuid": "4b99066b-3adf-4c3d-82c2-dd018830b5fa"
+                },
+                {
+                  "key": "friendliness",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "5636d2f0-23ee-41d5-950e-383e2062bdb9"
+                },
+                {
+                  "key": "trainability",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "58094925-77df-4ec6-beec-e899ded632f4"
+                },
+                {
+                  "key": "shedding_amount",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "1d25f46b-60aa-497b-bef3-c2c0d0620b25"
+                },
+                {
+                  "key": "exercise_needs",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "69867dd7-32b2-4b9f-9d1f-94ebf0bac14b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1:8000/api/breeds/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "breeds",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Breed",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "sadfas",
+                  "type": "text",
+                  "uuid": "0320b492-18f6-4be2-8dd3-148518a038e2"
+                },
+                {
+                  "key": "size",
+                  "value": "tiny",
+                  "type": "text",
+                  "uuid": "4b99066b-3adf-4c3d-82c2-dd018830b5fa"
+                },
+                {
+                  "key": "friendliness",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "5636d2f0-23ee-41d5-950e-383e2062bdb9"
+                },
+                {
+                  "key": "trainability",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "58094925-77df-4ec6-beec-e899ded632f4"
+                },
+                {
+                  "key": "shedding_amount",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "1d25f46b-60aa-497b-bef3-c2c0d0620b25"
+                },
+                {
+                  "key": "exercise_needs",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "69867dd7-32b2-4b9f-9d1f-94ebf0bac14b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1:8000/api/breeds/3/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "breeds",
+                "3",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Get Breed",
+      "item": [
+        {
+          "name": "Get all Breeds",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "127.0.0.1:8000/api/breeds/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "breeds",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Breed 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "127.0.0.1:8000/api/breeds/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "breeds",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Change Dog",
+      "item": [
+        {
+          "name": "Create Dog 1",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Шарик",
+                  "type": "text",
+                  "uuid": "dd7a408f-c235-4287-b15a-02362424d936"
+                },
+                {
+                  "key": "age",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "e5563b10-1e11-4700-bc31-0157ffb0c13b"
+                },
+                {
+                  "key": "breed",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "73242644-4960-470e-b77b-80051fc78193"
+                },
+                {
+                  "key": "gender",
+                  "value": "М",
+                  "type": "text",
+                  "uuid": "34418fe1-b4fa-443d-a9a3-37f20fb97542"
+                },
+                {
+                  "key": "color",
+                  "value": "Черно-коричневый",
+                  "type": "text",
+                  "uuid": "eb063a3f-909c-4609-bca6-a36772ddd809"
+                },
+                {
+                  "key": "favorite_food",
+                  "value": "Кукуруза",
+                  "type": "text",
+                  "uuid": "3aba484e-09e4-42c4-b0da-2cf492b31882"
+                },
+                {
+                  "key": "favorite_toy",
+                  "value": "Кость",
+                  "type": "text",
+                  "uuid": "2ddcaa30-800e-4ecb-a46d-b1a2a859bcae"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1:8000/api/dogs/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "dogs",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Dog 2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Круглик",
+                  "type": "text"
+                },
+                {
+                  "key": "age",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "breed",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "gender",
+                  "value": "Д",
+                  "type": "text"
+                },
+                {
+                  "key": "color",
+                  "value": "Белый",
+                  "type": "text"
+                },
+                {
+                  "key": "favorite_food",
+                  "value": "Курица",
+                  "type": "text"
+                },
+                {
+                  "key": "favorite_toy",
+                  "value": "Палка",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1/api/dogs/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "dogs",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "405 for patch",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "age",
+                  "value": "3",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1/api/dogs/2/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "dogs",
+                "2",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change Dog 2",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Круглик",
+                  "type": "text"
+                },
+                {
+                  "key": "age",
+                  "value": "3",
+                  "type": "text"
+                },
+                {
+                  "key": "breed",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "gender",
+                  "value": "Д",
+                  "type": "text"
+                },
+                {
+                  "key": "color",
+                  "value": "Белый",
+                  "type": "text"
+                },
+                {
+                  "key": "favorite_food",
+                  "value": "Курица",
+                  "type": "text"
+                },
+                {
+                  "key": "favorite_toy",
+                  "value": "Палка и тапки",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1/api/dogs/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "dogs",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Dog 3 for delete",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Тестовая собака на удаление",
+                  "type": "text"
+                },
+                {
+                  "key": "age",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "breed",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "gender",
+                  "value": "Д",
+                  "type": "text"
+                },
+                {
+                  "key": "color",
+                  "value": "Белый",
+                  "type": "text"
+                },
+                {
+                  "key": "favorite_food",
+                  "value": "Курица",
+                  "type": "text"
+                },
+                {
+                  "key": "favorite_toy",
+                  "value": "Палка",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "127.0.0.1/api/dogs/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "dogs",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Dog 3",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "127.0.0.1/api/dogs/3/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [
+                "api",
+                "dogs",
+                "3",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Get Dog",
+      "item": [
+        {
+          "name": "Get All Dogs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "127.0.0.1:8000/api/dogs/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "dogs",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get 1 Dog",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "127.0.0.1:8000/api/dogs/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "dogs",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get 2 Dog",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "127.0.0.1:8000/api/dogs/2/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "dogs",
+                "2",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
